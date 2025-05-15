@@ -1,5 +1,4 @@
-import React from 'react';
-import { CheckCircleIcon, ArrowRightIcon, MailIcon } from 'lucide-react';
+import { CheckCircleIcon, MailIcon } from 'lucide-react';
 export function Flyer() {
   return <div className="max-w-4xl mx-auto px-8 py-12 bg-white min-h-screen">
       <div className="mb-12">
