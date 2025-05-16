@@ -2,7 +2,7 @@ import { CheckCircleIcon, MailIcon } from 'lucide-react';
 export function Flyer() {
   return <div className="max-w-4xl mx-auto px-8 py-12 bg-white min-h-screen">
       <div className="mb-12">
-        <img src="/Light.png" alt="Legion Logo" className="h-32 mb-8" />
+        <img src="./Light.png" alt="Legion Logo" className="h-32 mb-8" />
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#4A0D42]">
           Become a Legion Founding Partner: Shape the Future of Litigation
           Drafting & Earn Significant Rewards
