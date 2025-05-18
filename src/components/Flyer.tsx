@@ -7,15 +7,15 @@ import { motion } from "framer-motion";
 export function Flyer() {
   return (
     <motion.div
-      className="max-w-4xl mx-auto p-8 bg-white min-h-screen"
+      className="max-w-4xl mx-auto p-8 min-h-screen"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="mb-12 border-none shadow-none">
+      <Card className="mb-12 border-none shadow-none bg-transparent">
         <CardContent className="p-0">
-          <img src="./Light.png" alt="Legion Logo" className="h-32 mb-8" />
+          <img src="/light.png" alt="Legion Logo" className="h-16 mb-8" />
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#4A0D42]">
             Become a Legion{" "}
             <span className="relative">
@@ -184,9 +184,9 @@ export function Flyer() {
           </CardHeader>
           <CardContent>
           <div className="space-y-4">
-            {['Lucrative Founding Terms: Lock in our most generous commission structure, designed specifically for early partners.', 'Offer Innovation: Provide your clients with a cutting-edge AI tool that directly addresses drafting pain points.', 'Differentiate Your Services: Stand out by introducing valuable, efficiency-boosting technology.', 'Early Influence: Be among the first to partner and provide feedback as we rapidly develop new features.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
+            {['<strong>Lucrative Founding Terms:</strong> Secure our best commission structure.', '<strong>Offer Innovation:</strong> Provide clients a cutting-edge AI drafting tool.', '<strong>Differentiate:</strong> Stand out with efficiency-boosting technology.', '<strong>Early Influence:</strong> Shape new features with direct feedback.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
                 <CheckCircleIcon className="h-6 w-6 text-[#FFD700]" />
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: benefit }} />
               </div>)}
           </div>
           </CardContent>
@@ -206,9 +206,9 @@ export function Flyer() {
           </CardHeader>
           <CardContent>
           <div className="space-y-4">
-            {['Draft Faster: Significantly reduce time spent on repetitive drafting tasks using Legion.', 'Improve Quality: Leverage AI for more consistent and accurate documents.', 'Focus on Strategy: Free up attorney time for higher-value legal work.', 'Accessible Pricing: Pay-as-you-go model fits small/medium firm budgets.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
+            {['<strong>Draft Faster:</strong> Reduce time on repetitive tasks.', '<strong>Improve Quality:</strong> Gain consistent, accurate documents with AI.', '<strong>Focus on Strategy:</strong> Free up time for high-value legal work.', '<strong>Accessible Pricing:</strong> Pay-as-you-go fits small/medium firm budgets.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
                 <CheckCircleIcon className="h-6 w-6 text-[#FFD700]" />
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: benefit }} />
               </div>)}
           </div>
           </CardContent>
@@ -221,7 +221,7 @@ export function Flyer() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="mt-8 border-none shadow-none">
+        <Card className="mt-8 border-none shadow-none bg-transparent">
           <CardContent className="text-center">
             <h2 className="text-2xl font-bold mb-4 text-[#4A0D42]">
               Ready to Shape the Future and Reap the Rewards?
