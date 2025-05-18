@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-import LegionLogo from '/public/light.png';
+import LegionLogo from '../assets/light.png';
 
 export function Flyer() {
   return (
