@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
+import LegionLogo from '/public/light.png';
 
 export function Flyer() {
   return (
@@ -15,7 +16,7 @@ export function Flyer() {
     >
       <Card className="mb-12 border-none shadow-none bg-transparent">
         <CardContent className="p-0">
-          <img src="/light.png" alt="Legion Logo" className="h-16 mb-8" />
+          <img src={LegionLogo} alt="Legion Logo" className="h-16 mb-8" />
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#4A0D42]">
             Become a Legion{" "}
             <span className="relative">
