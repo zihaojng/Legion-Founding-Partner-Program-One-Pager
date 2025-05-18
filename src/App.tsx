@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flyer } from './components/Flyer';
 import InfinityBackground from './components/InfinityBackground';
 
