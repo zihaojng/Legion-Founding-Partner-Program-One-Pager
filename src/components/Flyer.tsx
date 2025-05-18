@@ -185,7 +185,7 @@ export function Flyer() {
           <CardContent>
           <div className="space-y-4">
             {['Lucrative Founding Terms: Lock in our most generous commission structure, designed specifically for early partners.', 'Offer Innovation: Provide your clients with a cutting-edge AI tool that directly addresses drafting pain points.', 'Differentiate Your Services: Stand out by introducing valuable, efficiency-boosting technology.', 'Early Influence: Be among the first to partner and provide feedback as we rapidly develop new features.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-[#FFD700] translate-y-[-10px]" />
+                <CheckCircleIcon className="h-6 w-6 text-[#FFD700]" />
                 <span className="text-gray-700">{benefit}</span>
               </div>)}
           </div>
@@ -207,7 +207,7 @@ export function Flyer() {
           <CardContent>
           <div className="space-y-4">
             {['Draft Faster: Significantly reduce time spent on repetitive drafting tasks using Legion.', 'Improve Quality: Leverage AI for more consistent and accurate documents.', 'Focus on Strategy: Free up attorney time for higher-value legal work.', 'Accessible Pricing: Pay-as-you-go model fits small/medium firm budgets.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-[#FFD700] translate-y-[-10px]" />
+                <CheckCircleIcon className="h-6 w-6 text-[#FFD700]" />
                 <span className="text-gray-700">{benefit}</span>
               </div>)}
           </div>
