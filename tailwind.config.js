@@ -7,6 +7,15 @@ export default {
     plugins: [require("tailwindcss-animate")],
     theme: {
     	extend: {
+        keyframes: {
+          "bg-position": {
+          "0%": { backgroundPosition: "0% 50%" },
+           "100%": { backgroundPosition: "100% 50%" },
+          }
+         },
+         animation: {
+           "bg-position": "bg-position 3s infinite alternate"
+         },
     		borderRadius: {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',

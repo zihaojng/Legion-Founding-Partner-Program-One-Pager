@@ -1,38 +1,91 @@
 import { CheckCircleIcon, MailIcon } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
+
 export function Flyer() {
-  return <div className="max-w-4xl mx-auto px-8 py-12 bg-white min-h-screen">
-      <div className="mb-12">
-        <img src="./Light.png" alt="Legion Logo" className="h-32 mb-8" />
-        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#4A0D42]">
-          Become a Legion Founding Partner: Shape the Future of Litigation
-          Drafting & Earn Significant Rewards
-        </h1>
-      </div>
-      <div className="space-y-12">
-        <section>
-          <h2 className="text-2xl font-bold mb-4 text-[#4A0D42]">
-            The Challenge:
-          </h2>
-          <p className="text-gray-700">
-            Drafting standard litigation documents – pleadings, discovery
-            requests, motions – consumes countless hours for litigators,
-            especially in small to medium-sized firms. This repetitive work
-            drains valuable time that could be spent on strategy, client
-            interaction, and growth.
-          </p>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold mb-4 text-[#4A0D42]">
-            The Solution: Legion - The AI-Powered Drafting Assistant for
-            Litigators
-          </h2>
-          <p className="text-gray-700 mb-6">
+  return (
+    <motion.div
+      className="max-w-4xl mx-auto p-8 bg-white min-h-screen"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <Card className="mb-12 border-none shadow-none">
+        <CardContent className="p-0">
+          <img src="./Light.png" alt="Legion Logo" className="h-32 mb-8" />
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#4A0D42]">
+            Become a Legion{" "}
+            <span className="relative">
+              Founding Partner
+              <svg
+                viewBox="0 0 286 73"
+                fill="none"
+                className="absolute -left-2 -right-2 -top-2 bottom-0 translate-y-[-14px]"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  transition={{
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
+                  stroke="#FFD700"
+                  strokeWidth="3"
+                />
+              </svg>
+            </span>:{" "}
+            Shape the Future of Litigation Drafting & Earn Significant Rewards
+          </h1>
+        </CardContent>
+      </Card>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl text-[#4A0D42]">
+              The Challenge:
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-700">
+              Drafting standard litigation documents – pleadings, discovery
+              requests, motions – consumes countless hours for litigators,
+              especially in small to medium-sized firms. This repetitive work
+              drains valuable time that could be spent on strategy, client
+              interaction, and growth.
+            </p>
+          </CardContent>
+        </Card>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle className="text-2xl text-[#4A0D42]">
+              The Solution: Legion - The AI-Powered Drafting Assistant for
+              Litigators
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-700 mb-6">
             Legion is building an intelligent, in-browser drafting platform
             designed specifically for US litigation attorneys. We leverage AI to
             help lawyers draft high-quality pleadings, discovery, and motions
             faster and more accurately.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 bg-gray-50 p-6 rounded-lg">
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 bg-gray-50 p-6 rounded-lg">
             <div>
               <h3 className="font-semibold mb-2 text-[#4A0D42]">
                 Current Focus:
@@ -61,13 +114,24 @@ export function Flyer() {
                 Simple & Accessible - $10/page usage-based pricing.
               </p>
             </div>
-          </div>
-        </section>
-        <section className="bg-[#4A0D42] text-white p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6">
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <Card className="mt-8 bg-[#4A0D42] text-white border-none">
+          <CardHeader>
+            <CardTitle className="text-2xl text-white">
             Introducing the Exclusive Legion Founding Partner Program
-          </h2>
-          <p className="text-gray-100 mb-6">
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-100 mb-6">
             We're looking for forward-thinking consultants, MSPs, and legaltech
             providers who serve law firms in CA, NY, FL, and IL to join our
             exclusive Founding Partner Program.
@@ -102,32 +166,63 @@ export function Flyer() {
                 features.
               </p>
             </div>
-          </div>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold mb-6 text-[#4A0D42]">
-            Why Partner with Legion Now?
-          </h2>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle className="text-2xl text-[#4A0D42]">
+              Why Partner with Legion Now?
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
           <div className="space-y-4">
             {['Lucrative Founding Terms: Lock in our most generous commission structure, designed specifically for early partners.', 'Offer Innovation: Provide your clients with a cutting-edge AI tool that directly addresses drafting pain points.', 'Differentiate Your Services: Stand out by introducing valuable, efficiency-boosting technology.', 'Early Influence: Be among the first to partner and provide feedback as we rapidly develop new features.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-[#4A0D42]" />
+                <CheckCircleIcon className="h-6 w-6 text-[#FFD700] translate-y-[-10px]" />
                 <span className="text-gray-700">{benefit}</span>
               </div>)}
           </div>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold mb-6 text-[#4A0D42]">
-            Benefits for Your Clients:
-          </h2>
+          </CardContent>
+        </Card>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle className="text-2xl text-[#4A0D42]">
+              Benefits for Your Clients:
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
           <div className="space-y-4">
             {['Draft Faster: Significantly reduce time spent on repetitive drafting tasks using Legion.', 'Improve Quality: Leverage AI for more consistent and accurate documents.', 'Focus on Strategy: Free up attorney time for higher-value legal work.', 'Accessible Pricing: Pay-as-you-go model fits small/medium firm budgets.'].map((benefit, i) => <div key={i} className="flex items-center gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-[#4A0D42]" />
+                <CheckCircleIcon className="h-6 w-6 text-[#FFD700] translate-y-[-10px]" />
                 <span className="text-gray-700">{benefit}</span>
               </div>)}
           </div>
-        </section>
-        <section className="border-t border-gray-200 pt-8">
-          <div className="text-center">
+          </CardContent>
+        </Card>
+      </motion.div>
+      <Separator className="my-8" />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <Card className="mt-8 border-none shadow-none">
+          <CardContent className="text-center">
             <h2 className="text-2xl font-bold mb-4 text-[#4A0D42]">
               Ready to Shape the Future and Reap the Rewards?
             </h2>
@@ -138,16 +233,23 @@ export function Flyer() {
             </p>
             <div className="inline-flex items-center text-[#4A0D42]">
               <MailIcon className="h-5 w-5 mr-2" />
-              <a href="mailto:zihao@legion.law" className="text-lg font-medium hover:underline">
+              <Button
+                variant="ghost"
+                className="text-lg font-medium text-[#4A0D42] hover:text-[#4A0D42]/90"
+                asChild
+              >
+                <a href="mailto:zihao@legion.law">
                 zihao@legion.law
-              </a>
+                </a>
+              </Button>
             </div>
             <p className="text-sm text-gray-500 mt-6">
               *The Legion Founding Partner Program terms and conditions are
               subject to a formal partnership agreement.
             </p>
-          </div>
-        </section>
-      </div>
-    </div>;
+          </CardContent>
+        </Card>
+      </motion.div>
+    </motion.div>
+  );
 }
